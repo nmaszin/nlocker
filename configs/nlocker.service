@@ -1,0 +1,8 @@
+[Unit]
+Description=NLocker
+
+[Service]
+ExecStart=#PATH#/nlocker/main.py
+
+[Install]
+WantedBy=multi-user.target
