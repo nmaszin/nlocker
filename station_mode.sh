@@ -1,10 +1,7 @@
 #!/usr/bin/bash
 
-cp /etc/dhcpcd.conf.original /etc/dhcpcd.conf
+mv /etc/dhcpcd.conf /etc/dhcpcd.conf.ap
+mv /etc/dhcpcd.conf.original /etc/dhcpcd.conf
+systemctl enable nlocker
 reboot
-
-# systemctl stop dnsmasq
-# systemctl stop hostapd
-# wpa_cli -i wlan0 reconfigure
-# systemctl restart dhcpcd
 
