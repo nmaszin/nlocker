@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nlocker-mysql:
+    image: mysql:8.0.27
+    container_name: nlocker-mysql
+    ports:
+      - 127.0.0.1:3306:3306
+    env_file:
+      - "./api/.env"
+
